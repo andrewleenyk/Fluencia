@@ -9,6 +9,7 @@ const Login = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
+    console.log(username, password);
 
     AuthService.login(username, password)
       .then(() => {
