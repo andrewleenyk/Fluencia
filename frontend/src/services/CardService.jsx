@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const CardService = () => {
-  const [data, setData] = useState({ terms: [], verbs: [] });
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     fetchData();
@@ -20,20 +20,8 @@ const CardService = () => {
   return (
     <div>
       <h1>Data from Django Backend:</h1>
-      <h2>Terms:</h2>
-      {data.terms.map((term) => (
-        <div key={term.id}>
-          <p>Word: {term.word}</p>
-          <p>Definition: {term.definition}</p>
-        </div>
-      ))}
-      <h2>Verbs:</h2>
-      {data.verbs.map((verb) => (
-        <div key={verb.id}>
-          <p>Word: {verb.word}</p>
-          <p>Definition: {verb.definition}</p>
-          <p>Conjugations: {JSON.stringify(verb.conjugations)}</p>
-        </div>
+      {data.map((item) => (
+        <p key={item.id}>{item.name}</p>
       ))}
     </div>
   );
