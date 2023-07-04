@@ -16,4 +16,3 @@ def index(request):
         'verbs': verbs
     }
     return render(request, 'cards/index.html', context)
-def 
