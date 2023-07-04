@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flashcards App</title>
+</head>
+<body>
+    <h1>Flashcards</h1>
+
+    <h2>Terms</h2>
+    <ul>
+    {% for term in terms %}
+        <li>{{ term.word }} - {{ term.definition }}</li>
+    {% endfor %}
+    </ul>
+
+    <h2>Verbs</h2>
+    <ul>
+    {% for verb in verbs %}
+        <li>{{ verb.word }} - {{ verb.definition }}</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
