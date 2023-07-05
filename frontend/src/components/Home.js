@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import authService from '../services/AuthService';
 import DashboardService from '../services/DashboardService';
+import FlashCards from './FlashCards/FlashCards';
 
-const CardService = () => {
+const Home = () => {
   const [data, setData] = useState({ terms: [], verbs: [] });
 
   useEffect(() => {
@@ -45,8 +46,9 @@ const CardService = () => {
       ))}
       <h2>Other Users:</h2>
       <DashboardService />
+      <FlashCards />
     </div>
   );
 };
 
-export default CardService;
+export default Home;
