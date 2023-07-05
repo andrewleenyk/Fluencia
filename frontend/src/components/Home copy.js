@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import authService from '../services/AuthService';
-import DashboardService from '../services/DashboardService';
+
 
 const CardService = () => {
   const [data, setData] = useState({ terms: [], verbs: [] });
@@ -43,8 +43,6 @@ const CardService = () => {
           <p>Conjugations: {JSON.stringify(verb.conjugations)}</p>
         </div>
       ))}
-      <h2>Other Users:</h2>
-      <DashboardService />
     </div>
   );
 };

@@ -8,4 +8,5 @@ urlpatterns = [
     path('logout/', LogoutView.as_view(), name='logout'),
     path('auth/token/', obtain_auth_token, name='token'),
 
+
 ]

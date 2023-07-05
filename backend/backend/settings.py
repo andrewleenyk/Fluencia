@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'http://localhost:3000']
 INSTALLED_APPS = [
     'cards',
     'myauth',
+    'userdashboard',
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
