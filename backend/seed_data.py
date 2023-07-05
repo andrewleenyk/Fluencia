@@ -6,6 +6,9 @@ django.setup()
 
 from cards.models import Term
 
+# to seed, run python seed_data.py
+Term.objects.all().delete()
+
 # Adjectives
 adjectives = [
     {'word': 'marrón', 'definition': 'The color brown.'},
