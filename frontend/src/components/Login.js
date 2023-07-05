@@ -3,8 +3,8 @@ import AuthService from '../services/AuthService';
 import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
   const handleLogin = (e) => {
@@ -23,6 +23,7 @@ const Login = () => {
   return (
     <div>
       <h2>Login</h2>
+      <a>your_username  your_password</a>
       <form onSubmit={handleLogin}>
         <input
           type="text"

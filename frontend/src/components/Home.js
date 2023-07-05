@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import authService from '../services/AuthService';
+
 
 const CardService = () => {
   const [data, setData] = useState({ terms: [], verbs: [] });
@@ -17,8 +19,14 @@ const CardService = () => {
     }
   };
 
+  const handleLogout = () => {
+    console.log("Home.js:: logged out, but need to refresh page to see change")
+    authService.logout();
+  };
+
   return (
     <div>
+      <button onClick={handleLogout}>Logout</button>
       <h1>Data from Django Backend:</h1>
       <h2>Terms:</h2>
       {data.terms.map((term) => (

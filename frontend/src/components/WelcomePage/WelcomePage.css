@@ -1,0 +1,25 @@
+.container {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.heading {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.links-container {
+    display: flex;
+    justify-content: center;
+}
+
+.link {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background: #f0f0f0;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+}

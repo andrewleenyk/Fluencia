@@ -4,6 +4,7 @@ import AuthService from './services/AuthService';
 import Home from './components/Home';
 import Login from './components/Login';
 import Register from './components/Register';
+import WelcomePage from './components/WelcomePage/WelcomePage';
 
 const PrivateRoute = ({ children }) => {
   const user = AuthService.getCurrentUser();
@@ -17,7 +18,7 @@ const App = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/home" element={ AuthService.getCurrentUser() ? <Home /> : <Navigate to="/login" replace={true} />} />
-        <Route path="*" element={<Navigate to="/login" replace={true} />} />
+        <Route path="*" element={<WelcomePage />} />
       </Routes>
     </Router>
   );
