@@ -1,6 +1,4 @@
 from django.contrib import admin
 
-from .models import Term, Verb
-
+from .models import Term
 admin.site.register(Term)
-admin.site.register(Verb)

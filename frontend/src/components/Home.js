@@ -5,7 +5,7 @@ import DashboardService from '../services/DashboardService';
 import FlashCards from './FlashCards/FlashCards';
 
 const Home = () => {
-  const [data, setData] = useState({ terms: [], verbs: [] });
+  const [data, setData] = useState({ terms: []});
 
   useEffect(() => {
     fetchData();
@@ -15,6 +15,7 @@ const Home = () => {
     try {
       const response = await axios.get('http://127.0.0.1:8000/cards/');
       setData(response.data);
+      console.log(data);
     } catch (error) {
       console.error('Error fetching data:', error);
     }
@@ -34,14 +35,6 @@ const Home = () => {
         <div key={term.id}>
           <p>Word: {term.word}</p>
           <p>Definition: {term.definition}</p>
-        </div>
-      ))}
-      <h2>Verbs:</h2>
-      {data.verbs.map((verb) => (
-        <div key={verb.id}>
-          <p>Word: {verb.word}</p>
-          <p>Definition: {verb.definition}</p>
-          <p>Conjugations: {JSON.stringify(verb.conjugations)}</p>
         </div>
       ))}
       <h2>Other Users:</h2>
