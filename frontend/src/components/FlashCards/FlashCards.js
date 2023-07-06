@@ -23,9 +23,9 @@ const FlashCards = () => {
   const handleCardClick = () => {
     setIsFlipped(!isFlipped);
   };
-
+  
   return (
-    <div>
+    <div className="container">
       <h1>Flashcards</h1>
       <div className={`card ${isFlipped ? 'flipped' : ''}`} onClick={handleCardClick}>
         <div className="card-content">
@@ -37,9 +37,12 @@ const FlashCards = () => {
           </div>
         </div>
       </div>
-      <button className="button" onClick={() => setCurrentIndex((currentIndex + 1) % terms.length)}>Next Card</button>
+      <div className="button-container">
+        <button className="button" onClick={() => setCurrentIndex((currentIndex - 1 + terms.length) % terms.length)}>Previous Card</button>
+        <button className="button" onClick={() => setCurrentIndex((currentIndex + 1) % terms.length)}>Next Card</button>
+      </div>
     </div>
-  );  
+  );
 };
 
 export default FlashCards;
