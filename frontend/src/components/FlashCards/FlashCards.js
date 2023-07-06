@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import './FlashCards.css'
 
 const FlashCards = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -26,21 +27,19 @@ const FlashCards = () => {
   return (
     <div>
       <h1>Flashcards</h1>
-      <div
-        className={`card ${isFlipped ? 'flipped' : ''}`}
-        onClick={handleCardClick}
-        style={{ backgroundColor: 'lightblue' }} // Add the desired background color
-      >
+      <div className={`card ${isFlipped ? 'flipped' : ''}`} onClick={handleCardClick}>
         <div className="card-content">
-          <h3>{terms[currentIndex]?.word}</h3>
-          {isFlipped && <p>{terms[currentIndex]?.definition}</p>}
+          <div className="front-face">
+            <h3>{terms[currentIndex]?.word}</h3>
+          </div>
+          <div className="back-face">
+            <p>{terms[currentIndex]?.definition}</p>
+          </div>
         </div>
       </div>
-      <button onClick={() => setCurrentIndex(currentIndex + 1)}>Next Card</button>
+      <button className="button" onClick={() => setCurrentIndex((currentIndex + 1) % terms.length)}>Next Card</button>
     </div>
   );  
 };
-
-
 
 export default FlashCards;
