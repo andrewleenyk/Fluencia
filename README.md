@@ -9,3 +9,9 @@ With Fluencia, language learners benefit from AI-driven algorithms that adapt th
 What sets Fluencia apart is its strong focus on social interaction. Users can connect with friends, join language clubs, and participate in friendly competitions to enhance their learning experience. By making language learning sociable and competitive, Fluencia taps into the power of social motivation to drive success.
 
 As a VC partner, investing in Fluencia means being part of a disruptive force in the edtech industry. Our user base is rapidly growing, and we have a clear roadmap for expansion into multiple languages and markets. Join us on this exciting journey to transform language learning into a social, AI-powered phenomenon.
+
+Progress:
+- Implement progress bar for card set.
+- Develop algorithm for quiet computation of proficiency for each term
+- Landing and sign-in/out page design
+- LLM AI prompt engineering and integration
