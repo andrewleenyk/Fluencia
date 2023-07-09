@@ -14,7 +14,7 @@ const Login = () => {
     AuthService.login(username, password)
       .then(() => {
         navigate('/home');
-      })
+      }) 
       .catch((error) => {
         console.log('Login failed', error);
       });
