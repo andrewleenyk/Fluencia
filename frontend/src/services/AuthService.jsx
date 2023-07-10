@@ -12,16 +12,22 @@ class AuthService {
     }
 
     async login(username, password) {
-        const response = await axios
-            .post(API_URL + 'login/', {
-                username,
-                password
-            });
-        if (response.data.token) {
-            localStorage.setItem('user', JSON.stringify(response.data));
+        try {
+            const response = await axios
+                .post(API_URL + 'login/', {
+                    username,
+                    password
+                });
+            if (response.data.token) {
+                localStorage.setItem('user', JSON.stringify(response.data));
+            }
+            return response.data;
+        } catch (error) {
+            console.error("Error during login", error);
+            throw error;
         }
-        return response.data;
     }
+    
 
     logout() {
         localStorage.removeItem('user');

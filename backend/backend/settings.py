@@ -45,7 +45,7 @@ INSTALLED_APPS = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000',  # Replace with your React app's URL
+    'http://localhost:3000', 
 ]
 
 AUTHENTICATION_BACKENDS = [

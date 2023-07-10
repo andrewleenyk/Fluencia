@@ -3,9 +3,11 @@ import axios from 'axios';
 import authService from '../services/AuthService';
 import DashboardService from '../services/DashboardService';
 import FlashCards from './FlashCards/FlashCards';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
   const [data, setData] = useState({ terms: []});
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetchData();
@@ -24,6 +26,8 @@ const Home = () => {
   const handleLogout = () => {
     console.log("Home.js:: logged out, but need to refresh page to see change")
     authService.logout();
+    navigate('/home');
+
   };
 
   return (
