@@ -1,7 +1,7 @@
 from django.http import JsonResponse
 from django.shortcuts import get_object_or_404
 
-from .models import Term
+from .models import Term, Category
 
 def index(request):
     # Retrieve all terms and verbs from the database
@@ -16,3 +16,8 @@ def index(request):
     }
 
     return JsonResponse(data)
+
+def categories(request):
+    beginner_category = Category.objects.get(name='beginner')
+    intermediate_category = Category.objects.get(name='intermediate')
+    advanced_category = Category.objects.get(name='advanced')
