@@ -33,7 +33,7 @@ const Home = () => {
   return (
     <div>
       <button onClick={handleLogout}>Logout</button>
-      <h1>Data from Django Backend:</h1>
+      <h1>Data:</h1>
       <h2>Terms:</h2>
       {data.terms.map((term) => (
         <div key={term.id}>
