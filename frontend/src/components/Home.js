@@ -33,6 +33,7 @@ const Home = () => {
   return (
     <div>
       <button onClick={handleLogout}>Logout</button>
+      <FlashCards />
       <h1>Data:</h1>
       <h2>Terms:</h2>
       {data.terms.map((term) => (
@@ -43,7 +44,7 @@ const Home = () => {
       ))}
       <h2>Other Users:</h2>
       <DashboardService />
-      <FlashCards />
+
     </div>
   );
 };
