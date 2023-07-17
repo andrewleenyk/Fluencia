@@ -14,7 +14,7 @@ Term.objects.all().delete()
 category_names = ['beginner', 'intermediate', 'advanced']
 for name in category_names:
     Category.objects.create(name=name)
-
+ 
 
 # Adjectives
 adjectives = [
