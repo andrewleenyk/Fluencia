@@ -41,6 +41,9 @@ const FlashCards = () => {
         <button className="button" onClick={() => setCurrentIndex((currentIndex - 1 + terms.length) % terms.length)}>Previous Card</button>
         <button className="button" onClick={() => setCurrentIndex((currentIndex + 1) % terms.length)}>Next Card</button>
       </div>
+      <div className="tutorbox">
+        <button className="button">Suggest Mnuemonic</button>
+      </div>
     </div>
   );
 };
